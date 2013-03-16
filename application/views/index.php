@@ -1,4 +1,4 @@
-   
+-->   
 <div data-role="page" id="start">    
 
 <div id="top" align="center">
@@ -7,11 +7,11 @@
 
 <form method="get" action="/start/search">
 <div align="center">
-<div>
-You are in city: Stockholm
+<div id="city-container">
+You are in city: <div id="city"></div>
 </div>
-<div>
-You are on street: Kungsgatan
+<div id="street-container">
+You are on street: <div id="street"></div>
 </div>
 </div>
 
