@@ -3,37 +3,22 @@ var lat = 59.32893000000001;
 var lng = 18.06491;
 $(function () {
 
-      /*  $.getJSON("http://festivalify.se:7474/db/data/cypher",  {
-  "query" : "n=node:node_auto_index(id={id}) return n",
-  "params" : {
-    "id" : "200101151",
-  }},
-  function (json) {
-            console.log(json);
-        });*/
 
 
- $.ajax({
-      type:"POST",
-      url: "http://festivalify.se:7474/db/data/cypher",
-      accepts: "application/json",
-      dataType:"json",
-      data:{
-             "query" : "start n=node:node_auto_index(id={asdf}) return n",
-             "params" : {"asdf" : 200101151}
-           },
-      success: function(data, textStatus, jqXHR){
-                      alert(textStatus);
-                        }
-             });//end of placelist ajax  
-             
              
     updatestart();
 
 
     $('#search-result').on('pageshow', function (event, ui) {
         $.getJSON("/js/spec.json", function (json) {
-            console.log(json);
+            jQuery.each(json.picks, function() {
+	            $('#final-list').append("<li id=\"listitem\"><a href=\"#entry\">"+
+		        "<img src=\""+this.listing.images+"\" />"+
+		        "<h2>"+this.listing.namn+"</h2>"+
+		        "<p>"+this.listing.beskrivning+"</p></a>"+
+		        "</li>");
+            });
+           $('ul').listview('refresh'); 
         });
     });
 

@@ -92,16 +92,18 @@ class Geocode extends CI_Controller {
 		$result = $query->getResultSet();
 		$lol = serialize($result);
 		$test =(array) unserialize($lol);
-		
+		$arr = array();
 		$i = 0;
 		foreach ($test as $row) {
 		if ($i == 0) {
 		} else if($i == 1) {}
 		else {
+    $arr[] = $row;
 			print(json_encode($row));
 		}
 		$i++;
 		}
+    print_r($arr);
 	}
 
 }

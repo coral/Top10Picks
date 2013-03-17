@@ -1,7 +1,7 @@
 /* Put your custom CSS here */
 
 .ui-page {
-/*      background:url(bg.png) repeat-x center center fixed; */
+/*      background:url(/images/bg.png) repeat-x center center fixed; */
 		background:#03394f;
       	-webkit-background-size: cover;          
       	-moz-background-size: cover;         
@@ -15,7 +15,7 @@
 
 /*
 body {
-	background-image:url(bg.png);
+	background-image:url(/images/bg.png);
 	background-repeat:repeat-x;
 	background-color:#000;	
 }
@@ -29,7 +29,7 @@ body {
 	background:#033a51;
 	width:100%;
 	height:60px;
-	background-image:url(topbg.png);
+	background-image:url(/images/topbg.png);
 	background-repeat:repeat-x;
 }
 
@@ -58,7 +58,7 @@ body {
 	background:#033a51;
 	width:100%;
 	height:60px;
-	background-image:url(topbg.png);
+	background-image:url(/images/topbg.png);
 	background-repeat:repeat-x;
 
 }
@@ -118,7 +118,7 @@ body {
 	text-align:left;
 	padding:10px;
 	background-color:#fff;
-	background-image:url(whitebg.png);
+	background-image:url(/images/whitebg.png);
 	margin-top:1px;
 	color:#007694;
 }
@@ -212,7 +212,7 @@ body {
    	width:100%;
    	height: 70px;
    	overflow: hidden;
-	background: url(selectarrow.png) no-repeat right #007694;
+	background: url(/images/selectarrow.png) no-repeat right #007694;
  /*   	box-shadow:none!important;
 	-moz-box-shadow:none!important; */
 	border-radius:0!important;
@@ -222,7 +222,7 @@ body {
    }	
 
 #activity:selected {
-	background: url(selected.png) repeat-x;
+	background: url(/images/selected.png) repeat-x;
 }
 
 
@@ -283,7 +283,7 @@ body {
 #footer {
 	position:fixed;
 	bottom:0px;
-	background-image:url(footerbg.png);
+	background-image:url(/images/footerbg.png);
 	background-repeat:repeat-x;
 	height:60px;
 	width:100%;
@@ -301,4 +301,114 @@ body {
 #footer_item img {
 	width:40px;
 	height:auto;
+}
+
+
+#placecardtop {
+	padding-bottom:0px;
+	padding-top:0px;
+	margin-bottom:0px;
+	background:#033a51;
+	width:100%;
+	height:60px;
+	background-image:url(/images/topbg.png);
+	background-repeat:repeat-x;
+}
+
+#placecardtop_item {
+	float:left;
+	margin-left:8%;
+	width:43px;
+	height:43px;
+}
+
+#placecardimage_wrap {
+	width:100%;
+	height:auto;
+	margin-top:1px;
+	margin-bottom:-3px;
+	padding:0px;	
+}
+
+#placecardimage img {
+	width:100%;
+	height:auto;
+}
+
+#placecardimagetag {
+	position:absolute;
+	left:0px;
+	background:#000;
+	padding:5px;
+	padding-right:20px;
+	margin-top:20px;
+	color:#fff;
+	font-size:20px;
+}
+
+#placecardrateing {
+	width:100%;
+	height:25px;
+	padding-top:8px;
+	padding-bottom:0px;
+}
+
+#placecardrateing_item {
+	float:left;
+	margin-left:10px;	
+}
+
+#placecardrateing_item img {
+	width:15px;
+	height:auto;
+}
+
+#placecardinfo {
+	background:#fff;
+	font-size:12px;
+	color:#03394f;
+	padding:10px;
+}
+
+#placecardsocial {
+	background:#007694;
+	width:100%;
+	height:90px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#placecardsocialimg {
+	float:left;
+	margin-left:3%;
+	height:60px;
+	width:60px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	overflow:hidden;
+	border:3px solid #fff1e5;
+}
+
+#placecardsocialimg img {
+	width:60px;
+	height:60px;
+}
+
+#placecardlinks {
+	width:100%;
+	padding-top:10px;
+	padding-bottom:20px;
+	color:#999;
+	font-size:14px;
+	background:#fff;
+}
+
+#placecardlinks_item {
+	margin-left:10px;
+}
+
+#placecardlinks a {
+	color:#999;
+	text-decoration:none;	
+	font-weight:100;
 }
