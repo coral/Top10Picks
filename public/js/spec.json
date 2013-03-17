@@ -1,0 +1,49 @@
+{
+    "picks": [
+        {
+            "listing": {
+                "name": "Plattan",
+                "description": "Här kan man köpa knark!",
+                "images": {
+                    "thumbnail": "small.jpg",
+                    "bigimage": "big.jpg"
+                }
+            },
+            "description": {
+                "name": "Plattan",
+                "description": "Här kan man köpa knark!",
+                "location": {
+                    "lat": 10.41721250,
+                    "lng": 15.46233910
+                },
+                "station": "Medborgarplatsen",
+                "text": "Här köper man oftast mycket gott knark! Jävlar vad hög man kan bli här!"
+                
+            }
+            
+        },
+        {
+            "listing": {
+                "name": "Plattan",
+                "description": "Här kan man köpa knark!",
+                "images": {
+                    "thumbnail": "small.jpg",
+                    "bigimage": "big.jpg"
+                }
+            },
+            "description": {
+                "name": "Plattan",
+                "description": "Här kan man köpa knark!",
+                "location": {
+                    "lat": 10.41721250,
+                    "lng": 15.46233910
+                },
+                "station": "Medborgarplatsen",
+                "text": "Här köper man oftast mycket gott knark! Jävlar vad hög man kan bli här!"
+                
+            }        
+    }
+    
+],
+"status": "OK"
+}

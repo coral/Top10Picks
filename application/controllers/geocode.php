@@ -1,10 +1,24 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+require("phar://".APPPATH."/libraries/neo4jphp.phar");
+	use Everyman\Neo4j\Client,
+	Everyman\Neo4j\Index\NodeIndex,
+	Everyman\Neo4j\Relationship,
+	Everyman\Neo4j\Node,
+	Everyman\Neo4j\Cypher,
+	Everyman\Neo4j\Transport,
+	Everyman\Neo4j\Query,
+	Everyman\Neo4j\PropertyContainer,
+	Everyman\Neo4j\Query\Row;
+	
 class Geocode extends CI_Controller {
 
 	 
 	public function __construct()
 	{
 	    parent::__construct();
+	    
+
+
 	}
 	
 	public function index($lat = "59.31536440000001", $lng = "18.019315799999998")
@@ -32,7 +46,7 @@ class Geocode extends CI_Controller {
 		
 	}
 	
-	public function json($lat = "59.31536440000001", $lng = "18.019315799999998")
+	public function json($lat = "59.3348987", $lng = "17.9780504")
 	{
 	
 		$lat = $this->input->get('latitude');
@@ -66,6 +80,30 @@ class Geocode extends CI_Controller {
 		}
 		
 	}
+
+
+	public function test($id = 200103431, $stations = 3)
+	{
+		
+		
+		$client = new Client();
+		$queryTemplate = "start from = node:node_auto_index(id={id}),  to= node(*) MATCH p = allShortestPaths(from-[*..".$stations."]-to) RETURN extract(n in nodes(p) : n.name);";
+		$query = new Cypher\Query($client, $queryTemplate, array('id'=>$id));
+		$result = $query->getResultSet();
+		$lol = serialize($result);
+		$test =(array) unserialize($lol);
+		
+		$i = 0;
+		foreach ($test as $row) {
+		if ($i == 0) {
+		} else if($i == 1) {}
+		else {
+			print(json_encode($row));
+		}
+		$i++;
+		}
+	}
+
 }
 
 /* End of file welcome.php */
